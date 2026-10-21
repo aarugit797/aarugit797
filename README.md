@@ -176,32 +176,6 @@ What I like about this project is that it covers the full classic NLP path: look
 
 **Stack:** Python, pandas, scikit-learn, TF-IDF, LinearSVC, Pickle, Streamlit.
 
-### 04. Churn Prediction with an Artificial Neural Network
-
-**Deep learning project**  ·  [Repository](https://github.com/aarugit797/Aaradhya_Jain-Deep-Learning-project)
-
-I explored a customer churn dataset and built an ANN-based classification workflow. The repository contains the modelling notebook, application code, trained model artefacts, and preprocessing objects. It is one of the projects that helped me practise the practical side of deep learning, particularly keeping the preprocessing used during training aligned with the preprocessing used for prediction.
-
-**Stack:** Python, TensorFlow/Keras, pandas, scikit-learn, Jupyter Notebook.
-
-### 05. House Price Case Study
-
-**Regression and data analysis**  ·  [Repository](https://github.com/aarugit797/House-Price-CaseStudy)
-
-A machine learning case study focused on exploring housing data and building a price prediction workflow. This is part of my earlier ML practice, where I worked on the data preparation and modelling steps that sit around a model, not just the final estimator.
-
-### 06. Synapse Landing Page
-
-**Website for the Computer Engineering committee**  ·  [Repository](https://github.com/aarugit797/Synapse_LP)
-
-This project is connected to my role as Secretary of Synapse. It gives the committee a simple web presence and is an example of the work that sits alongside community building, event planning, and student engagement.
-
-### 07. Inkloom
-
-**A project I have on my profile**  ·  [Repository](https://github.com/aarugit797/inkloom) · [Project site](https://inkloom.art)
-
-Inkloom is exploring a more structured approach to logo design, breaking the process into brand analysis, typography, symbol construction, and composition rather than treating the logo as one image-generation step. I have this repository on my profile as a fork, so I link it as something to explore rather than present the whole platform as my original work.
-
 ---
 
 ## 🐍 GitHub Contribution Snake
