@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="650" viewBox="0 0 1400 650" role="img" aria-labelledby="title desc">
+<title id="title">Tech Intelligence Agent architecture</title>
+<desc id="desc">A scheduled collection pipeline stores and queues research items, while a separate Telegram conversation agent retrieves items and answers questions using tools. PostgreSQL is the durable source of truth and Redis handles delivery state, limits, and locking.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#111d31"/></linearGradient>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6a9bd0"/></marker>
+  <style>
+    .heading{font-family:Arial,sans-serif;font-size:21px;font-weight:700;fill:#e6eefb}
+    .subhead{font-family:Consolas,monospace;font-size:12px;fill:#91a7c5;letter-spacing:.45px}
+    .label{font-family:Arial,sans-serif;font-size:13px;font-weight:700;fill:#e6eefb}
+    .body{font-family:Arial,sans-serif;font-size:11px;fill:#b5c7df}
+    .small{font-family:Arial,sans-serif;font-size:10px;fill:#7dd3fc}
+    .pill{font-family:Arial,sans-serif;font-size:11px;font-weight:700}
+  </style>
+</defs>
+<rect x="1" y="1" width="1398" height="648" rx="18" fill="url(#bg)" stroke="#263a56"/>
+<text class="heading" x="30" y="38">TECH INTELLIGENCE AGENT</text>
+<text class="subhead" x="30" y="61">TWO SEPARATE FLOWS · SHARED POSTGRESQL AND REDIS · TELEGRAM INTERFACE</text>
+<!-- collection lane -->
+<rect x="25" y="83" width="1350" height="230" rx="14" fill="#0a1525" stroke="#29425f"/>
+<rect x="42" y="97" width="180" height="25" rx="12" fill="#12324a"/><text class="pill" x="132" y="114" text-anchor="middle" fill="#7dd3fc">01 / COLLECTION</text>
+<!-- stage 1 -->
+<rect x="43" y="145" width="180" height="133" rx="10" fill="#13243a" stroke="#31516e"/>
+<text class="label" x="133" y="168" text-anchor="middle">Research sources</text><text class="body" x="133" y="192" text-anchor="middle">Hacker News · arXiv</text><text class="body" x="133" y="210" text-anchor="middle">GitHub trends · RSS</text><text class="small" x="133" y="241" text-anchor="middle">Scheduled collection</text>
+<!-- stage 2 -->
+<rect x="263" y="145" width="180" height="133" rx="10" fill="#17213a" stroke="#4c5fa0"/>
+<text class="label" x="353" y="168" text-anchor="middle">Cheap filters</text><text class="body" x="353" y="192" text-anchor="middle">Age and source metadata</text><text class="body" x="353" y="210" text-anchor="middle">Remove obvious noise</text><text class="small" x="353" y="241" text-anchor="middle">Before model calls</text>
+<!-- stage 3 -->
+<rect x="483" y="145" width="180" height="133" rx="10" fill="#17213a" stroke="#4c5fa0"/>
+<text class="label" x="573" y="168" text-anchor="middle">LLM scoring</text><text class="body" x="573" y="192" text-anchor="middle">Novelty · relevance</text><text class="body" x="573" y="210" text-anchor="middle">Usefulness · 1 to 5</text><text class="small" x="573" y="241" text-anchor="middle">Rank candidates</text>
+<!-- stage 4 -->
+<rect x="703" y="145" width="180" height="133" rx="10" fill="#162b32" stroke="#347c73"/>
+<text class="label" x="793" y="168" text-anchor="middle">Deduplicate</text><text class="body" x="793" y="192" text-anchor="middle">Similarity and source caps</text><text class="body" x="793" y="210" text-anchor="middle">Choose a concise batch</text><text class="small" x="793" y="241" text-anchor="middle">Target: 5 useful items</text>
+<!-- stage 5 -->
+<rect x="923" y="145" width="180" height="133" rx="10" fill="#122b3a" stroke="#26759b"/>
+<text class="label" x="1013" y="168" text-anchor="middle">PostgreSQL</text><text class="body" x="1013" y="192" text-anchor="middle">Items and source content</text><text class="body" x="1013" y="210" text-anchor="middle">Embeddings in pgvector</text><text class="small" x="1013" y="241" text-anchor="middle">Durable source of truth</text>
+<!-- stage 6 -->
+<rect x="1143" y="145" width="214" height="133" rx="10" fill="#1e233a" stroke="#7461b5"/>
+<text class="label" x="1250" y="168" text-anchor="middle">Redis delivery state</text><text class="body" x="1250" y="192" text-anchor="middle">Queue and in-flight list</text><text class="body" x="1250" y="210" text-anchor="middle">Rate limits and poller lock</text><text class="small" x="1250" y="241" text-anchor="middle">Control delivery and retries</text>
+<g stroke="#6a9bd0" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M223 211 H257"/><path d="M443 211 H477"/><path d="M663 211 H697"/><path d="M883 211 H917"/><path d="M1103 211 H1137"/></g>
+<!-- shared data bar -->
+<rect x="248" y="329" width="904" height="48" rx="10" fill="#142033" stroke="#38506f"/>
+<text x="700" y="349" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#dbeafe">SHARED STATE, WITH TWO DIFFERENT JOBS</text>
+<text x="700" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#9fb4d0">PostgreSQL keeps durable records · Redis coordinates queue state, rate limits, and a single poller</text>
+<!-- conversation lane -->
+<rect x="25" y="394" width="1350" height="226" rx="14" fill="#0a1525" stroke="#29425f"/>
+<rect x="42" y="408" width="205" height="25" rx="12" fill="#30203f"/><text class="pill" x="144" y="425" text-anchor="middle" fill="#f0abfc">02 / CONVERSATION</text>
+<!-- conversation 1 -->
+<rect x="43" y="455" width="180" height="132" rx="10" fill="#13243a" stroke="#31516e"/>
+<text class="label" x="133" y="478" text-anchor="middle">Telegram message</text><text class="body" x="133" y="502" text-anchor="middle">Ask about an item</text><text class="body" x="133" y="520" text-anchor="middle">or request research</text><text class="small" x="133" y="552" text-anchor="middle">Conversation history</text>
+<!-- conversation 2 -->
+<rect x="263" y="455" width="195" height="132" rx="10" fill="#17213a" stroke="#4c5fa0"/>
+<text class="label" x="360" y="478" text-anchor="middle">Guardrail + intent</text><text class="body" x="360" y="502" text-anchor="middle">Check prompt injection</text><text class="body" x="360" y="520" text-anchor="middle">Classify the request</text><text class="small" x="360" y="552" text-anchor="middle">Route before answering</text>
+<!-- conversation 3 -->
+<rect x="498" y="455" width="190" height="132" rx="10" fill="#17213a" stroke="#4c5fa0"/>
+<text class="label" x="593" y="478" text-anchor="middle">LangGraph router</text><text class="body" x="593" y="502" text-anchor="middle">Select the right tool</text><text class="body" x="593" y="520" text-anchor="middle">for this question</text><text class="small" x="593" y="552" text-anchor="middle">4 tool paths</text>
+<!-- tools group -->
+<rect x="728" y="446" width="398" height="150" rx="10" fill="#102632" stroke="#347c73"/>
+<text class="label" x="927" y="466" text-anchor="middle">Tool layer</text>
+<rect x="743" y="478" width="180" height="44" rx="7" fill="#18394b" stroke="#26759b"/><text x="833" y="496" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#a7e7fb">pgvector RAG</text><text x="833" y="512" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9fb4d0">Answer from stored items</text>
+<rect x="931" y="478" width="180" height="44" rx="7" fill="#18394b" stroke="#26759b"/><text x="1021" y="496" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#a7e7fb">Digest history</text><text x="1021" y="512" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9fb4d0">Look up previous editions</text>
+<rect x="743" y="536" width="180" height="44" rx="7" fill="#263144" stroke="#596b89"/><text x="833" y="554" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#cbd5e1">Web search</text><text x="833" y="570" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9fb4d0">Retrieve current sources</text>
+<rect x="931" y="536" width="180" height="44" rx="7" fill="#263144" stroke="#596b89"/><text x="1021" y="554" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#cbd5e1">Small talk</text><text x="1021" y="570" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9fb4d0">Handle general chat</text>
+<!-- response -->
+<rect x="1166" y="455" width="191" height="132" rx="10" fill="#1c2d28" stroke="#347c55"/>
+<text class="label" x="1261" y="478" text-anchor="middle">Grounded response</text><text class="body" x="1261" y="502" text-anchor="middle">Use available source data</text><text class="body" x="1261" y="520" text-anchor="middle">Keep source links intact</text><text class="small" x="1261" y="552" text-anchor="middle">Say when content is missing</text>
+<g stroke="#6a9bd0" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M223 520 H257"/><path d="M458 520 H492"/><path d="M688 520 H722"/><path d="M1126 520 H1160"/></g>
+<text x="30" y="637" font-family="Consolas,monospace" font-size="11" fill="#7388a6">DESIGN CHOICE: INGESTION AND CONVERSATION RUN INDEPENDENTLY, BUT READ FROM THE SAME DURABLE STORE.</text>
+</svg>

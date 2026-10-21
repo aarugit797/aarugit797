@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="430" viewBox="0 0 1400 430" role="img" aria-labelledby="title desc">
+<title id="title">Mumbai Worker Sahayak architecture</title>
+<desc id="desc">A multilingual question enters a FastAPI backend, LangGraph selects one of four information tools, and the answer is streamed to the frontend. Hybrid retrieval and multilingual semantic caching support information lookup.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#111d31"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#818cf8"/></linearGradient>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6a9bd0"/></marker>
+  <style>
+    .heading{font-family:Arial,sans-serif;font-size:20px;font-weight:700;fill:#e6eefb}
+    .subhead{font-family:Consolas,monospace;font-size:12px;fill:#91a7c5;letter-spacing:.35px}
+    .label{font-family:Arial,sans-serif;font-size:14px;font-weight:700;fill:#e6eefb}
+    .body{font-family:Arial,sans-serif;font-size:12px;fill:#b5c7df}
+    .small{font-family:Arial,sans-serif;font-size:11px;fill:#7dd3fc}
+    .tooltitle{font-family:Arial,sans-serif;font-size:12px;font-weight:700;fill:#e6eefb}
+    .toolbody{font-family:Arial,sans-serif;font-size:11px;fill:#b5e7c5}
+    .footlabel{font-family:Arial,sans-serif;font-size:12px;font-weight:700;fill:#d7e5f7}
+    .footbody{font-family:Arial,sans-serif;font-size:11px;fill:#9fb4d0}
+  </style>
+</defs>
+<rect x="1" y="1" width="1398" height="428" rx="18" fill="url(#bg)" stroke="#263a56"/>
+<text class="heading" x="28" y="35">MUMBAI WORKER SAHAYAK</text>
+<text class="subhead" x="28" y="58">MULTILINGUAL LABOUR INFORMATION · TOOL ROUTING · GROUNDED ANSWERS</text>
+<rect x="28" y="82" width="200" height="198" rx="12" fill="#13243a" stroke="#31516e"/>
+<rect x="28" y="82" width="200" height="4" rx="2" fill="#38bdf8"/>
+<circle cx="52" cy="110" r="11" fill="#173b54" stroke="#38bdf8"/><text x="52" y="114" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#c6f1ff">1</text>
+<text class="label" x="128" y="115" text-anchor="middle">User question</text>
+<text class="body" x="128" y="151" text-anchor="middle">Hindi · Marathi · English</text>
+<text class="body" x="128" y="174" text-anchor="middle">Ask in everyday language</text>
+<rect x="49" y="208" width="158" height="40" rx="8" fill="#102f45" stroke="#266385"/><text class="small" x="128" y="232" text-anchor="middle">Next.js frontend</text>
+<rect x="266" y="82" width="220" height="198" rx="12" fill="#17213a" stroke="#4c5fa0"/>
+<rect x="266" y="82" width="220" height="4" rx="2" fill="#818cf8"/>
+<circle cx="290" cy="110" r="11" fill="#292c55" stroke="#818cf8"/><text x="290" y="114" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#e0e7ff">2</text>
+<text class="label" x="376" y="115" text-anchor="middle">API + LangGraph</text>
+<text class="body" x="376" y="151" text-anchor="middle">FastAPI receives the query</text>
+<text class="body" x="376" y="174" text-anchor="middle">Router chooses the best tool</text>
+<rect x="291" y="208" width="170" height="40" rx="8" fill="#252a4a" stroke="#4c5fa0"/><text x="376" y="232" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#c7d2fe">4 specialised tools</text>
+<rect x="524" y="82" width="500" height="198" rx="12" fill="#0e2630" stroke="#347c73"/>
+<rect x="524" y="82" width="500" height="4" rx="2" fill="#34d399"/>
+<text class="label" x="774" y="109" text-anchor="middle">Information tools</text>
+<text class="body" x="774" y="128" text-anchor="middle">LangGraph routes to the relevant source</text>
+<rect x="542" y="143" width="222" height="51" rx="8" fill="#14323a" stroke="#347c73"/>
+<text class="tooltitle" x="653" y="163" text-anchor="middle">Labour law PDFs</text><text class="toolbody" x="653" y="181" text-anchor="middle">Hybrid retrieval: pgvector + BM25</text>
+<rect x="784" y="143" width="222" height="51" rx="8" fill="#14323a" stroke="#347c73"/>
+<text class="tooltitle" x="895" y="163" text-anchor="middle">Live job listings</text><text class="toolbody" x="895" y="181" text-anchor="middle">Adzuna API</text>
+<rect x="542" y="208" width="222" height="51" rx="8" fill="#14323a" stroke="#347c73"/>
+<text class="tooltitle" x="653" y="228" text-anchor="middle">Government schemes</text><text class="toolbody" x="653" y="246" text-anchor="middle">Eligibility and scheme details</text>
+<rect x="784" y="208" width="222" height="51" rx="8" fill="#14323a" stroke="#347c73"/>
+<text class="tooltitle" x="895" y="228" text-anchor="middle">Labour news</text><text class="toolbody" x="895" y="246" text-anchor="middle">Relevant updates and reports</text>
+<rect x="1062" y="82" width="310" height="198" rx="12" fill="#1c2d28" stroke="#347c55"/>
+<rect x="1062" y="82" width="310" height="4" rx="2" fill="#34d399"/>
+<circle cx="1086" cy="110" r="11" fill="#194234" stroke="#34d399"/><text x="1086" y="114" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#d1fae5">3</text>
+<text class="label" x="1217" y="115" text-anchor="middle">Grounded answer</text>
+<text class="body" x="1217" y="151" text-anchor="middle">Respond using retrieved information</text>
+<text class="body" x="1217" y="174" text-anchor="middle">Streamed to the user with SSE</text>
+<rect x="1092" y="208" width="250" height="40" rx="8" fill="#163d30" stroke="#347c55"/><text x="1217" y="232" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#a7f3d0">Cloud Run API · Vercel UI</text>
+<g stroke="#6a9bd0" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M228 181 H260"/><path d="M486 181 H518"/><path d="M1024 181 H1056"/></g>
+<rect x="28" y="304" width="434" height="95" rx="10" fill="#0c192a" stroke="#29425f"/>
+<text class="footlabel" x="46" y="328">MULTILINGUAL SEMANTIC CACHE</text><text class="footbody" x="46" y="350">Supabase pgvector can reuse a cached answer</text><text class="footbody" x="46" y="368">for similar questions across Hindi, Marathi,</text><text class="footbody" x="46" y="386">and English, reducing repeated LLM calls.</text>
+<rect x="483" y="304" width="434" height="95" rx="10" fill="#0c192a" stroke="#29425f"/>
+<text class="footlabel" x="501" y="328">RETRIEVAL</text><text class="footbody" x="501" y="350">Vector similarity finds semantically related content;</text><text class="footbody" x="501" y="368">BM25 adds keyword matching for more reliable</text><text class="footbody" x="501" y="386">labour-law search results.</text>
+<rect x="938" y="304" width="434" height="95" rx="10" fill="#0c192a" stroke="#29425f"/>
+<text class="footlabel" x="956" y="328">INTEGRATION &amp; DELIVERY</text><text class="footbody" x="956" y="350">Tools exposed through an MCP server using JSON-RPC 2.0.</text><text class="footbody" x="956" y="368">FastAPI runs on Google Cloud Run; Next.js sends</text><text class="footbody" x="956" y="386">streaming responses to the Vercel frontend.</text>
+</svg>
