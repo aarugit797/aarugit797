@@ -1,7 +1,6 @@
 <div align="center">
-  <img src="./assets/profile-hero.svg" width="100%" alt="Aaradhya Jain terminal introduction with an ASCII portrait generated from Aaradhya's photograph" />
+  <img src="./assets/profile-hero.svg" width="100%" alt="Animated terminal introduction. The text types in line by line while an ASCII portrait draws itself row by row." />
   <br />
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2600&pause=700&color=58A6FF&center=true&vCenter=true&width=780&lines=I+build+AI+systems+that+use+tools+and+evidence;I+like+understanding+systems+from+first+principles;LLMs+%7C+NLP+%7C+Backend+Engineering+%7C+System+Design" alt="Typing animation introducing my work" />
   <br />
   <a href="https://github.com/aarugit797"><img src="https://img.shields.io/badge/GitHub-aarugit797-161b22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://linkedin.com/in/aaradhyajain2025"><img src="https://img.shields.io/badge/LinkedIn-Aaradhya%20Jain-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -175,6 +174,32 @@ I used TF-IDF to represent questions numerically, with up to 8,000 features and 
 What I like about this project is that it covers the full classic NLP path: looking at the data, cleaning it, creating features, comparing models, and putting the selected model behind an interface.
 
 **Stack:** Python, pandas, scikit-learn, TF-IDF, LinearSVC, Pickle, Streamlit.
+
+### 04. Churn Prediction with an Artificial Neural Network
+
+**Deep learning project**  ·  [Repository](https://github.com/aarugit797/Aaradhya_Jain-Deep-Learning-project)
+
+I explored a customer churn dataset and built an ANN-based classification workflow. The repository contains the modelling notebook, application code, trained model artefacts, and preprocessing objects. It is one of the projects that helped me practise the practical side of deep learning, particularly keeping the preprocessing used during training aligned with the preprocessing used for prediction.
+
+**Stack:** Python, TensorFlow/Keras, pandas, scikit-learn, Jupyter Notebook.
+
+### 05. House Price Case Study
+
+**Regression and data analysis**  ·  [Repository](https://github.com/aarugit797/House-Price-CaseStudy)
+
+A machine learning case study focused on exploring housing data and building a price prediction workflow. This is part of my earlier ML practice, where I worked on the data preparation and modelling steps that sit around a model, not just the final estimator.
+
+### 06. Synapse Landing Page
+
+**Website for the Computer Engineering committee**  ·  [Repository](https://github.com/aarugit797/Synapse_LP)
+
+This project is connected to my role as Secretary of Synapse. It gives the committee a simple web presence and is an example of the work that sits alongside community building, event planning, and student engagement.
+
+### 07. Inkloom
+
+**A project I have on my profile**  ·  [Repository](https://github.com/aarugit797/inkloom) · [Project site](https://inkloom.art)
+
+Inkloom is exploring a more structured approach to logo design, breaking the process into brand analysis, typography, symbol construction, and composition rather than treating the logo as one image-generation step. I have this repository on my profile as a fork, so I link it as something to explore rather than present the whole platform as my original work.
 
 ---
 
